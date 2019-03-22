@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<style>
+
+		p.serif {
+		  font-family: "Times New Roman", Times, serif;
+		}
+
+		p.sansserif {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+
+		</style>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Back</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Baxter PlayYahtzee</h1>
+							<span class="image main"><img src="images/baxter_me.jpg" alt="" /></span>
+							<p class="sansserif" style="font-size:160%;" align="justify">This project aimed at programming Baxter robot to finish the task of playing yahtzee game automatically. The workflow is: For the first step, baxter will pick up the cup with dice inside and then rotate its ‘wrist’ to pour the dice onto the table. Then baxter moves its end-effector to a ‘home position’ with a nice pose to read the value of the dice on table. The game engine starts after that to calculate which dice should be picked up. The final step is to pick up the those dice and put them back to the cup. When all of the steps are finished, the first game round is finished and baxter is set to play the next round until the game ends. Here are the <strong><a href="https://www.youtube.com/watch?v=vOceYSICtQc">video demonstration</a></strong> and  <strong><a href="https://github.com/mschlafly/baxterplaysyahtzee">github repository</a></strong>.</p>
+							<p class="sansserif" style="font-size:160%;" align="justify">My work for this project focused on manipulation part and building the main sequence node by calling several ROS customized services, to construct the framework of the task. In manipulation, we mainly used built-in ROS service ‘ik’ to get the trajectory given the target dice location. However the built-in service sometimes may have no valid solution, so I used the ‘seed’ method to optimize the solution. To estimate if each attempt to pick up dice succeeds or not, I make use of ROS message of Baxter end-effector to monitor the force between grippers. If it fails it will try again until gripper detects the force back from the dice. To communicate more efficiently between nodes, we also created several self-made service and message types and released them on github repo. This project helps me have a deeper understanding in robotic manipulation and get proficient in ROS usage.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Get in touch</h2>
+								<form method="post" action="mailto:zhichengyu2019@u.northwestern.edu">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="message" id="message" placeholder="Message"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/dekucheng" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="mailto:zhichengyu2019@u.northwestern.edu" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
