@@ -51,6 +51,7 @@
 					<h2>Menu</h2>
 					<ul>
 						<li><a href="index.html">Home</a></li>
+						<li><a href="AMCL_Wake_Up.html">AMCL Wake Up!</a></li>
 						<li><a href="Turtlebot_Selfparking.html">Turtlebot Self-parking</a></li>
 						<li><a href="HPE_and_Action_Recognition.html">HPE and Action Recognition</a></li>
 						<li><a href="Baxter_PlayYahtzee.html">Baxter PlayYahtzee</a></li>
@@ -64,7 +65,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Kuka YouBot Manipulation in V-Rep</h1>
-							<iframe width="1340" height="830" src="https://www.youtube.com/embed/fng32kuF7pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="1280" height="720" src="https://www.youtube.com/embed/fng32kuF7pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<p class="sansserif" style="font-size:160%;" align="justify">This project is the final capstone of course Robotic Manipulation. The goal of it was to manipulate the KUKA youBot (a robot with with four mecanum wheels and a 5R robot arm) to pick up a cube and drop it off at a target configuration, given the initial and final configuration of the cube. This project covered the knowledge of trajectory generation, motion planing, odometry and PID controller. I programmed with python to finish this project.</p>
 							<h1 style="font-size:200%;">Workflow</h1>
 							<p class="sansserif" style="font-size:160%;" align="justify">The first step of this project was to generate the reference trajectory of end-effector based on the initial and final configuration of the cube, which will be the desired configuration <i>Xd</i> of end-effector at each time step. Given an initial configuration of youBot, I applied a PID controller to derive the twist at each time step based on the current end-effector configuration error <i>Xerr</i>. </p>

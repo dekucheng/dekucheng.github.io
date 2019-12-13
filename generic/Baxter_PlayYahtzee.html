@@ -51,10 +51,12 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="Turtlebot_Selfparking.html">Turtlebot Self-parking</a></li>
+							<li><a href="HPE_and_Action_Recognition.html">HPE and Action Recognition</a></li>
+							<li><a href="Baxter_PlayYahtzee.html">Baxter PlayYahtzee</a></li>
+							<li><a href="Robotic_Manipulation.html">Kuka Youbot Manipulation</a></li>
+							<li><a href="Windmill_Impact_Simulation.html">Windmill Impact Simulation</a></li>
+							<li><a href="FSAE.html">FSAE Racing Competition</a></li>
 						</ul>
 					</nav>
 
@@ -62,7 +64,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>Baxter PlayYahtzee</h1>
-							<span class="image main"><img src="images/baxter_me.jpg" alt="" /></span>
+							<span class="image main"><img src="images/baxter_general.jpg" alt="" /></span>
 							<p class="sansserif" style="font-size:160%;" align="justify">This project aimed at programming Baxter robot to finish the task of playing yahtzee game automatically. The workflow is: For the first step, baxter will pick up the cup with dice inside and then rotate its ‘wrist’ to pour the dice onto the table. Then baxter moves its end-effector to a ‘home position’ with a nice pose to read the value of the dice on table. The game engine starts after that to calculate which dice should be picked up. The final step is to pick up the those dice and put them back to the cup. When all of the steps are finished, the first game round is finished and baxter is set to play the next round until the game ends. Here are the <strong><a href="https://www.youtube.com/watch?v=vOceYSICtQc">video demonstration</a></strong> and  <strong><a href="https://github.com/mschlafly/baxterplaysyahtzee">github repository</a></strong>.</p>
 							<p class="sansserif" style="font-size:160%;" align="justify">My work for this project focused on manipulation part and building the main sequence node by calling several ROS customized services, to construct the framework of the task. In manipulation, we mainly used built-in ROS service ‘ik’ to get the trajectory given the target dice location. However the built-in service sometimes may have no valid solution, so I used the ‘seed’ method to optimize the solution. To estimate if each attempt to pick up dice succeeds or not, I make use of ROS message of Baxter end-effector to monitor the force between grippers. If it fails it will try again until gripper detects the force back from the dice. To communicate more efficiently between nodes, we also created several self-made service and message types and released them on github repo. This project helps me have a deeper understanding in robotic manipulation and get proficient in ROS usage.</p>
 						</div>
